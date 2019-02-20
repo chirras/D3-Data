@@ -1,4 +1,4 @@
-Active season,Player,Team,Conference,Date,Position,Height,Weight,Age,Draft Year,Seasons in league,Season,Season short,Real_value
+ActiveSeason,Player,Team,Conference,Date,Position,Height,Weight,Age,DraftYear,SeasonsInLeague,Season,SeasonShort,RealValue
 0,Micheal Ray Richardson,New Jersey Nets,,"Apr 14, 1985",PG,6-5,189,29,1978,6,1984-1985,1985,1.0
 0,Derek Smith,Los Angeles Clippers,,"Apr 7, 1985",SG,6-6,205,23,1982,2,1984-1985,1985,1.0
 0,Calvin Natt,Denver Nuggets,,"Apr 1, 1985",F,6-6,220,28,1979,5,1984-1985,1985,1.0
