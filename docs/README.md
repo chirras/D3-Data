@@ -69,7 +69,7 @@ The following operations were done on the raw data as a part of the cleanup proc
 ---
 
 |Domain Task | Analytic Task (Low Level) | Search Task (Mid Level) | Analyze Task (High Level) |
-|-----------------------------------------------------------------------------------------------
+|------------|---------------------------|-------------------------|---------------------------|
 |Examine if the sales prices will rise or fall | Identify | Lookup | Present |			
 |Compare the projected sales per store | Compare |	Lookup | Present/Derive |
 |Compare the trained model's performance with actual sales prices | Compare	| Lookup | Derive |
