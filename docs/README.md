@@ -19,30 +19,68 @@ We aim to approach this problem from two different perspectives:
 <p align="justify"> we would like to design a web application that provides an interface by which data scientists or store managers can use past sales data to forecast it from a selected date. In addition to allowing the user to retrain and tune three different time series models, the application also displays the model performance, past information and forecasted predictions visually. </p>
 
 
-### Dataset
+### Data Analysis
 ---
+
+#### Dataset
+
 The dataset is sample sales information of 10 different stores over the time of 2 years from DataRobot Inc.
 
 Features Available:
 
-| Feature Name      | Description                                                                |
-|-------------------|----------------------------------------------------------------------------|
-| Store_Location 	| Different locations of the store [Categorical]							 |
-| Date 				| Year, month and day of the sales of the stores [Quantitative]              |
-| Sales 			| Sales of different stores over time [Quantitative]                         |
-| Store_Size 		| size of the store [Quantitative]                                           |
-| Num_Employees 	| Number of employees on that particular date and store [Quantitative].      |
-| Returns_Pct		| Return percentage [Quantitative]                                           |
-| Num_Customer		| Number of Customers in a store and on a particular Date [Quantitative]     |
-| Pct_On_Sale 		| Percentage on Sale [Quantitative]                                          |
-| Marketing			| Discount Information of the store on a date [Text]                         |
-| Near_Xmas			| If a particular day is near to Christmas [Categorical]                     |
-| Near_BlackFriday	| If a particular day is near to Black Friday [Categorical]                  |
-| Holiday			| If a particular is a Holiday or not [Categorical]                          |
-| Destination_Event	| If there is a destination event on that particular day or not [Categorical]|
-| Econ_ChangeGDP	| Change in economy GDP [Quantitative]                                       |
-| Econ_JobsChange	| Change in jobs [Quantitative]                                              |
-| Annualized_CPI 	| Annual Consumer Price Index (CPI) [Quantitative]                           |
+| Feature Name      | Data Type  | Description                                                                |
+|-------------------|------------|----------------------------------------------------------------------------|
+| Store_Location 	| String     | Different locations of the store [Categorical]							  |
+| Date 				| Date/Time  | Year, month and day of the sales of the stores [Quantitative]              |
+| Sales 			| Float      | Sales of different stores over time [Quantitative]                         |
+| Store_Size 		| Integer    | size of the store [Quantitative]                                           |
+| Num_Employees 	| Integer    | Number of employees on that particular date and store [Quantitative].      |
+| Returns_Pct		| Float      | Return percentage [Quantitative]                                           |
+| Num_Customer		| Integer    | Number of Customers in a store and on a particular Date [Quantitative]     |
+| Pct_On_Sale 		| Float      | Percentage on Sale [Quantitative]                                          |
+| Marketing			| Text       | Discount Information of the store on a date [Text]                         |
+| Near_Xmas			| Integer    | If a particular day is near to Christmas [Categorical]                     |
+| Near_BlackFriday	| Integer    | If a particular day is near to Black Friday [Categorical]                  |
+| Holiday			| String     | If a particular is a Holiday or not [Categorical]                          |
+| Destination_Event	| String     | If there is a destination event on that particular day or not [Categorical]|
+| Econ_ChangeGDP	| Float      | Change in economy GDP [Quantitative]                                       |
+| Econ_JobsChange	| Float      | Change in jobs [Quantitative]                                              |
+| Annualized_CPI 	| Float      | Annual Consumer Price Index (CPI) [Quantitative]                           |
+
+
+#### Data Preprocessing
+
+The following operations were done on the raw data as a part of the cleanup process:
+
+- Typecasting Features (For Instance: Date).
+
+- Conditional processing of features Holiday and Destination_Event to numeric from string to numeric.
+
+- One-Hot encoding of categorical features.
+
+- Normalizing the quantitative features.
+
+- Character count for text features as a new feature.
+
+- Imputing Missing values for quantitative features Econ_ChangeGDP, Econ_JobsChange, Annualized_CPI using forward filling as these are an economic indicator which will remain same.
+
+
+### Task Analysis
+---
+
+|Domain Task | Analytic Task (Low Level) | Search Task (Mid Level) | Analyze Task (High Level) |
+|-----------------------------------------------------------------------------------------------
+|Examine if the sales prices will rise or fall | Identify | Lookup | Present |			
+|Compare the projected sales per store | Compare |	Lookup | Present/Derive |
+|Compare the trained model's performance with actual sales prices | Compare	| Lookup | Derive |
+|Compare the rise or fall of sales price from a previously set base price | Compare	| Lookup | Derive |
+|Sales predictions of a given store over time (Days/Weeks)	Filter	Lookup	Derive
+|Trend in sales of different stores at a given point of time |	Identify | Lookup | Present |
+|Comparision of Sales between of a given stores (Actual/Predicted) | Compare | Lookup | Present/Derive |
+|Number of Employee needed at different times of an year given a store | summarize | Lookup | Present |
+|Number of Customers at different times of an year given a store | summarize | Lookup | Present |
+|Amount of Sales during black friday and christmas (Actual/Predicted) |	Compare | Lookup | Present/Derive |
+|Feature contibuting positively for the sales prediction | Identify | Locate | Derive |
 
 
 ### Getting Started
