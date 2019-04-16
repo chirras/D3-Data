@@ -25,37 +25,24 @@ The dataset is sample sales information of 10 different stores over the time of 
 
 Features Available:
 
-Store_Location 		- Different locations of the store [Categorical]
-
-Date 				- Year, month and day of the sales of the stores [Quantitative]
-
-Sales 				- Sales of different stores over time [Quantitative]
-
-Store_Size 			- size of the store [Quantitative]
-
-Num_Employees 		- Number of employees on that particular date and store [Quantitative]
-
-Returns_Pct			- Return percentage [Quantitative]
-
-Num_Customer		- Number of Customers in a store and on a particular Date [Quantitative]
-
-Pct_On_Sale 		- Percentage on Sale [Quantitative]
-
-Marketing			- Discount Information of the store on a date [Text]
-
-Near_Xmas			- If a particular day is near to Christmas [Categorical]
-
-Near_BlackFriday	- If a particular day is near to Black Friday [Categorical]
-
-Holiday				- If a particular is a Holiday or not [Categorical]
-
-Destination_Event	- If there is a destination event on that particular day or not [Categorical]
-
-Econ_ChangeGDP		- Change in economy GDP [Quantitative]
-
-Econ_JobsChange		- Change in jobs [Quantitative]
-
-Annualized_CPI 		- Annual Consumer Price Index (CPI) [Quantitative]
+| Feature Name      | Description                                                                |
+|-------------------|----------------------------------------------------------------------------|
+| Store_Location 	| Different locations of the store [Categorical]							 |
+| Date 				| Year, month and day of the sales of the stores [Quantitative]              |
+| Sales 			| Sales of different stores over time [Quantitative]                         |
+| Store_Size 		| size of the store [Quantitative]                                           |
+| Num_Employees 	| Number of employees on that particular date and store [Quantitative].      |
+| Returns_Pct		| Return percentage [Quantitative]                                           |
+| Num_Customer		| Number of Customers in a store and on a particular Date [Quantitative]     |
+| Pct_On_Sale 		| Percentage on Sale [Quantitative]                                          |
+| Marketing			| Discount Information of the store on a date [Text]                         |
+| Near_Xmas			| If a particular day is near to Christmas [Categorical]                     |
+| Near_BlackFriday	| If a particular day is near to Black Friday [Categorical]                  |
+| Holiday			| If a particular is a Holiday or not [Categorical]                          |
+| Destination_Event	| If there is a destination event on that particular day or not [Categorical]|
+| Econ_ChangeGDP	| Change in economy GDP [Quantitative]                                       |
+| Econ_JobsChange	| Change in jobs [Quantitative]                                              |
+| Annualized_CPI 	| Annual Consumer Price Index (CPI) [Quantitative]                           |
 
 
 ### Getting Started
